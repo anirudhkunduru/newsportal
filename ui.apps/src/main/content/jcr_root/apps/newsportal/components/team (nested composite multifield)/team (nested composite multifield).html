@@ -1,0 +1,19 @@
+<div data-sly-use.model="com.karthik.newsportal.core.models.TeamModel" class="team-component">
+    <h2>${model.teamTitle}</h2>
+    <p>${model.teamDesc}</p>
+
+    <ul data-sly-test="${model.teamMembers}" class="team-list" data-sly-list.member="${model.teamMembers}">
+        <li class="team-member">
+            <img src="${member.photo}" 
+                 alt="${member.name}" 
+                 width="200" height="200" 
+                 style="object-fit: cover; object-position: center 20%; aspect-ratio: 1/1; border-radius: 8px; background: #eee;" 
+                 class="team-member__photo"/>
+            
+            <h3 class="team-member__name">${member.name}</h3>
+            <p class="team-member__designation">${member.designation}</p>
+        </li>
+    </ul>
+
+    <p data-sly-test="${!model.teamMembers}">No team members added yet.</p>
+</div>

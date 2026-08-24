@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="DrivingLicence Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <State
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                fieldLabel="Select Options"
+                name="./state">
+                <items jcr:primaryType="nt:unstructured">
+                    <option_x0020_-_x0020_1
+                        jcr:primaryType="nt:unstructured"
+                        text="ANDHRA PRADESH"/>
+                    <option_x0020_-_x0020_2
+                        jcr:primaryType="nt:unstructured"
+                        text="TELANGANA"/>
+                    <option_x0020_-_x0020_3
+                        jcr:primaryType="nt:unstructured"
+                        text="KARNATAKA"/>
+                </items>
+            </State>
+            <LicenceNumber
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldDescription="Same as in your Application"
+                fieldLabel="Licence Number"
+                name="./licenseNumber"
+                required="{Boolean}true"/>
+            <YourName
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldDescription="Same as your Identity"
+                fieldLabel="Your Name"
+                name="./yourName"
+                required="{Boolean}true"/>
+            <FatherName
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldDescription="Same as your Identity"
+                fieldLabel="Father Name"
+                name="./fatherName"
+                required="{Boolean}true"/>
+            <Address
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                fieldLabel="Address"
+                name="./address"/>
+            <IssuedOn
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                fieldLabel="Issued On"
+                name="./issuedOn"/>
+            <IssuingAuthority
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                fieldLabel="Issuing Authority"
+                name="./issuingAuthority"
+                required="{Boolean}true"/>
+            <ProfilePicture
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                fieldLabel="Profile Picture"
+                name="./profilePhotoReference"/>
+            <SecondPhoto
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                fieldLabel="Second Photo"
+                name="./secondPhotoReference"/>
+        </items>
+    </content>
+</jcr:root>

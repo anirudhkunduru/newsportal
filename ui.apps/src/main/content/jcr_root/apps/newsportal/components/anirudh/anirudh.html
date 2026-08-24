@@ -1,0 +1,70 @@
+<div class="advanced">
+
+    <h1 data-sly-test="${properties.text}">
+        ${properties.text}
+    </h1>
+
+    <h1 data-sly-test="${properties.textarea}">
+        ${properties.textarea}
+    </h1>
+
+    <h1 data-sly-test="${properties.dob}">
+        ${'dd MMM yyyy' @ format=properties.dob}
+    </h1>
+
+    <sly data-sly-test="${properties.image}">
+        <img src="${properties.image}"
+             style="width:120px; height:150px; object-fit:cover; border:1px solid #000;">
+    </sly>
+
+    <h1 data-sly-test="${properties.number}">
+        ${properties.number}
+    </h1>
+
+</div>
+
+
+<div class="basic">
+
+    <h1 data-sly-test="${properties.check}">
+        ${properties.check}
+    </h1>
+
+    <h1 data-sly-test="${properties.select}">
+        ${properties.select}
+    </h1>
+
+    <h1 data-sly-test="${properties.multifield}">
+        ${properties.multifield}
+    </h1>
+
+    <h1 data-sly-test="${properties.fullname}">
+        ${properties.fullname}
+    </h1>
+
+    <h1 data-sly-test="${properties.dateofbirth}">
+        ${properties.dateofbirth}
+    </h1>
+
+    <sly data-sly-test="${properties.image1}">
+        <img src="${properties.image1}"
+             style="width:120px; height:150px; object-fit:cover; border:1px solid #000;">
+    </sly>
+
+    <h1 data-sly-test="${properties.phonenumber}">
+        ${properties.phonenumber}
+    </h1>
+
+    <h1 data-sly-test="${properties.employees}">
+        ${properties.employees}
+    </h1>
+
+    <h1 data-sly-test="${properties.name}">
+        ${properties.name}
+    </h1>
+
+    <h1 data-sly-test="${properties.age}">
+        ${properties.age}
+    </h1>
+
+</div>

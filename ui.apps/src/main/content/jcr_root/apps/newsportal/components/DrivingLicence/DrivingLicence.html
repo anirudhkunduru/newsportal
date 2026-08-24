@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AP Driving Licence Replica</title>
+<style>
+*{box-sizing:border-box}
+body{background:#e9e9e9;font-family:Arial,Helvetica,sans-serif}
+
+.dl{
+    width:860px;
+    height:540px;
+    margin:20px auto;
+    background:#fff;
+    border-radius:14px;
+    padding:22px 26px;
+    position:relative;
+    box-shadow:0 5px 25px rgba(0,0,0,.15);
+    overflow:hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TOP HEADER */
+.top{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    width:100%;
+}
+
+.emblem{
+    width:65px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+}
+
+.emblem img{
+    width:54px;
+    height:auto;
+}
+
+.banner{
+    flex:1;
+    background:#164a21; 
+    border-radius:8px;
+    color:#fff;
+    text-align:center;
+    padding:12px 10px;
+    font-weight:700;
+}
+
+.banner .t1{
+    font-size:25px;
+    letter-spacing:0.8px;
+}
+
+.banner .t2{
+    font-size:22px;
+    margin-top:4px;
+    letter-spacing:0.5px;
+}
+
+/* LICENCE NUMBER */
+.lic{
+    text-align:center;
+    font-size:33px;
+    letter-spacing:1.5px;
+    font-weight:700;
+    color:#864152; 
+    margin-top:14px;
+    margin-bottom:12px;
+}
+
+/* BACKGROUND WATERMARK */
+.watermark{
+    position:absolute;
+    left:50%;
+    top:54%;
+    transform:translate(-50%,-50%);
+    width:280px;
+    height:280px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg') no-repeat center center;
+    background-size: contain;
+    opacity: .04; 
+    pointer-events:none;
+}
+
+/* MAIN BODY SECTION */
+.content{
+    display:flex;
+    flex: 1;
+    position:relative;
+    z-index:2;
+    height: 350px;
+}
+
+/* TRACK 1: LEFT TRACK COLUMN (CHIP & GHOST PHOTO) */
+.left-track-column{
+    width:150px;
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    padding-top: 25px; 
+}
+
+/* REALISTIC MICROCHIP CONTACT PAD SYSTEM */
+.chip {
+    width: 88px;
+    height: 68px;
+    border-radius: 10px;
+    border: 1px solid #7d5e13;
+    position: relative;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-bottom: 28px;
+    box-shadow: 
+        inset 0 1px 3px rgba(255,255,255,0.6),
+        inset 0 -1px 3px rgba(0,0,0,0.2),
+        0 2px 4px rgba(0,0,0,0.15);
+    background: linear-gradient(
+        150deg,
+        #f4df91 0%,
+        #cca129 15%,
+        #e9cc6a 30%,
+        #b28414 45%,
+        #eedf8f 60%,
+        #c69922 75%,
+        #f2df95 90%,
+        #a5780d 100%
+    );
+}
+
+.chip::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        180deg,
+        transparent 0px,
+        transparent 8px,
+        rgba(0, 0, 0, 0.15) 8px,
+        rgba(0, 0, 0, 0.15) 9px
+    );
+}
+
+.chip::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 36px;
+    height: 26px;
+    border: 1.5px solid rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.3),
+        rgba(130, 95, 10, 0.2)
+    );
+}
+
+.photo2{
+    width:105px;
+    height:130px;
+    object-fit:cover;
+    margin-left:20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* TRACK 2: MIDDLE TRACK COLUMN */
+.middle-track-column {
+    flex: 1;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+}
+
+.info-text-block {
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    padding-right: 5px; 
+    align-items: flex-start;
+    text-align: left;
+}
+
+.name, .father, .addr{
+    font-weight:700;
+    text-transform:uppercase;
+    color:#111;
+    word-break:break-word;
+    width: 100%;
+}
+
+.name{font-size:24px; line-height:1.25; letter-spacing: 0.3px;}
+.father{font-size:21px;}
+
+/* CRITICAL FIX: pre-line forces the HTML element to obey your input's manual line breaks */
+.addr{
+    font-size:18px; 
+    line-height:1.45;
+    white-space: pre-line; 
+}
+
+/* COMPONENT BLOCK FOR LOWER METADATA PACKS */
+.lower-metadata-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 5px;
+}
+
+.issue{
+    font-size:18px;
+    font-weight:700;
+    color:#111;
+}
+
+.block{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.tick-circle {
+    width: 24px;
+    height: 24px;
+    border: 1.5px solid #666;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #444;
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.txt{
+    font-size:15px;
+    font-weight:700;
+    color:#222;
+    line-height:1.2;
+}
+
+/* TRACK 3: RIGHT TRACK COLUMN */
+.right-track-column{
+    width:220px; 
+    display:flex;
+    flex-direction:column;
+    align-items: flex-start; 
+    justify-content: space-between;
+    flex-shrink: 0;
+    height: 350px;
+    padding-left: 0px; 
+}
+
+.photo1{
+    width:130px;
+    height:155px;
+    object-fit:cover;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-left: 65px; 
+}
+
+/* SECURITY CIRCLES POSITIONING */
+.dots{
+    display:flex;
+    gap:14px;
+    margin-left: 10px; 
+    margin-top: 4px;
+}
+
+.g,.b{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+}
+.g{background: radial-gradient(circle, #52a66f, #1b532d);}
+.b{background: radial-gradient(circle, #4d7fe6, #183e85);}
+
+/* DIGITAL SIGN TRACK */
+.right-metadata-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    text-align: left;
+    width: 100%;
+    padding-bottom: 5px;
+    padding-left: 10px; 
+}
+
+.right-metadata-stack .block {
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.auth{
+    font-size:16px;
+    color:#a36c81; 
+    font-weight:700;
+    margin-bottom: 4px;
+    white-space: nowrap;
+}
+
+.office{
+    font-size:22px;
+    font-weight:700;
+    color:#111;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+</style>
+</head>
+<body>
+
+<div class="dl">
+    <div class="watermark"></div>
+
+    <div class="top">
+        <div class="emblem">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Emblem_of_India.svg" alt="Emblem of India">
+        </div>
+        <div class="banner">
+            <div class="t1">INDIAN UNION DRIVING LICENCE</div>
+            <div class="t2">${properties.state}</div>
+        </div>
+    </div>
+
+    <div class="lic">${properties.licenseNumber}</div>
+
+    <div class="content">
+        
+        <div class="left-track-column">
+            <div class="chip"></div>
+            <img class="photo2" src="${properties.secondPhotoReference}" alt="Ghost Profile">
+        </div>
+
+        <div class="middle-track-column">
+            <div class="info-text-block">
+                <div class="name">${properties.yourName}</div>
+                <div class="father">S/O ${properties.fatherName}</div>
+                <div class="addr">${properties.address}</div>
+            </div>
+            
+            <div class="lower-metadata-stack">
+                <div class="block">
+                    <div class="tick-circle">&#10003;</div>
+                    <div class="txt">Aadhaar<br>Authenticated</div>
+                </div>
+                <div class="issue">Issued On : ${'dd-MM-yyyy' @ format=properties.issuedOn}</div>
+            </div>
+        </div>
+
+        <div class="right-track-column">
+            <img class="photo1" src="${properties.profilePhotoReference}" alt="Primary Profile">
+            
+            <div class="dots">
+                <div class="g"></div>
+                <div class="b"></div>
+            </div>
+
+            <div class="right-metadata-stack">
+                <div class="block">
+                    <div class="tick-circle">&#10003;</div>
+                    <div class="txt">Digitally<br>Signed By</div>
+                </div>
+                <div class="auth">Licencing Authority</div>
+                <div class="office">${properties.issuingAuthority}</div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

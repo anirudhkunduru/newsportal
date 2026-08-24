@@ -1,0 +1,104 @@
+<sly data-sly-use.model="com.karthik.newsportal.core.models.SidebarModel"></sly>
+
+
+<!-- Header -->
+
+<sly data-sly-test="${model.logoPath}">
+    <img
+        src="${model.logoPath}"
+        alt="Logo"
+        width="200"
+        style="height:auto;"/>
+</sly>
+
+<br><br>
+
+<sly data-sly-test="${model.logoMobileImage}">
+    <img
+        src="${model.logoMobileImage}"
+        alt="Mobile Logo"
+        width="200"
+        style="height:auto;"/>
+</sly>
+
+<br>
+
+<p data-sly-test="${model.logoLink}">
+    ${model.logoLink}
+</p>
+
+
+<!-- Enable Switch -->
+
+<p>Enable Switch: ${model.enableSwitch}</p>
+
+<sly data-sly-test="${model.enableSwitch}">
+    <p>🟢 Enable Switch is ON ✅</p>
+</sly>
+
+<sly data-sly-test="${!model.enableSwitch}">
+    <p>🔴 Enable Switch is OFF ❌</p>
+</sly>
+
+
+<!-- Header Links -->
+
+<sly data-sly-list.item="${model.headerLinks}">
+
+    <p data-sly-test="${item.textfield}">
+        ${item.textfield}
+    </p>
+
+    <sly data-sly-test="${item.pathfield}">
+        <img
+            src="${item.pathfield}"
+            alt="Header Image"
+            width="200"
+            style="height:auto;"/>
+    </sly>
+
+    <br>
+
+</sly>
+
+
+<!-- SideBar Navigation -->
+
+<sly data-sly-list.item="${model.sidebarNavigation}">
+
+    <sly data-sly-test="${item.desktopIcon}">
+        <img
+            src="${item.desktopIcon}"
+            alt="Desktop Icon"
+            width="200"
+            style="height:auto;"/>
+    </sly>
+
+    <br><br>
+
+    <sly data-sly-test="${item.mobileIcon}">
+        <img
+            src="${item.mobileIcon}"
+            alt="Mobile Icon"
+            width="200"
+            style="height:auto;"/>
+    </sly>
+
+    <br>
+
+    <sly data-sly-list.item1="${item.nestedMultifield}">
+
+        <p data-sly-test="${item1.navigationURL}">
+            ${item1.navigationURL}
+        </p>
+
+    </sly>
+
+</sly>
+
+
+<!-- Region -->
+
+<p data-sly-test="${model.country}">
+    ${model.country}
+</p>

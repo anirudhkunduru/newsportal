@@ -1,0 +1,24 @@
+<style>
+.boldText{
+    color: #000;
+    font-weight: bold;
+}
+</style>
+
+<sly data-sly-use.model="com.karthik.newsportal.core.models.VenkatRamanaModel">
+
+    <p class="boldText">${model.text}</p>
+
+    <sly data-sly-list="${model.firstLevelItems}">
+
+        <p class="boldText">${item.formattedDob}</p>
+
+        <sly data-sly-list="${item.secondLevelItems}">
+
+            <p class="boldText">${item.textarea}</p>
+
+        </sly>
+
+    </sly>
+
+</sly>

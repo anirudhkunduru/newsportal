@@ -1,0 +1,14 @@
+<sly data-sly-use.model="com.karthik.newsportal.core.models.HeaderModel">
+
+    <img src="${model.pathField}" alt="Image" width="200"/>
+
+    <p>${model.textField}</p>
+
+    <sly data-sly-list.item="${model.multiField}">
+        <p>${item.textField2}</p>
+        <p>${'dd MMM yyyy' @ format=item.datePicker}</p>
+    </sly>
+    
+    <p>${model.checkbox}</p>
+
+</sly>

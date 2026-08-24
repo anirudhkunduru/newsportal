@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Anirudh Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <basic
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Basic"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <text
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Same as your Identity"
+                                fieldLabel="FirstName"
+                                name="./text"
+                                required="{Boolean}true"/>
+                            <textarea
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                fieldLabel="Description"
+                                name="./textarea"/>
+                            <dob
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                fieldLabel="Date Of Birth"
+                                name="./dob"/>
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Image"
+                                name="./image"/>
+                            <number
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                fieldLabel="Number"
+                                name="./number"/>
+                        </items>
+                    </basic>
+                    <advanced
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Advanced"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <check
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldLabel="CheckBox"
+                                name="./check"
+                                text="Single"
+                                value="Single"/>
+                            <select
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Select Options"
+                                name="./select">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <empty
+                                        jcr:primaryType="nt:unstructured"
+                                        text="--Select an Option--"
+                                        value="\0"/>
+                                    <option_x0020_-_x0020_1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Option - A"
+                                        value="A"/>
+                                    <option_x0020_-_x0020_2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Option - B"
+                                        value="B"/>
+                                    <option_x0020_-_x0020_3
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Option - C"
+                                        value="C"/>
+                                </items>
+                            </select>
+                            <multifield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                fieldLabel="Articles">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="FirstName"
+                                    name="./multifield"/>
+                            </multifield>
+                            <composite_x0020_multifield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Related Articles">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./compositeMultifield">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <name
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldDescription="Same as your Identity"
+                                            fieldLabel="Full Name"
+                                            name="./fullname"
+                                            required="{Boolean}true"/>
+                                        <dob
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                            fieldLabel="Date Of Birth"
+                                            name="./dateofbirth"/>
+                                        <image
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Image"
+                                            name="./image1"/>
+                                        <phonenumber
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                            fieldLabel="Phone Number"
+                                            name="./phonenumber"/>
+                                    </items>
+                                </field>
+                            </composite_x0020_multifield>
+                        </items>
+                    </advanced>
+                    <practice
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Practice"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <employees
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Employees">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <name
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Name"
+                                            name="./name"/>
+                                        <age
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
+                                            fieldLabel="Age"
+                                            name="./age"/>
+                                    </items>
+                                </field>
+                            </employees>
+                        </items>
+                    </practice>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

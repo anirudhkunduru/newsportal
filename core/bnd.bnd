@@ -1,0 +1,5 @@
+Import-Package: \
+  com.day.cq.*;version='[1.0,10)',\
+  org.apache.sling.*;version='[1.0,20)',\
+  org.osgi.*;version='[1.0,10)',\
+  *;resolution:=optional

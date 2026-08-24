@@ -1,0 +1,72 @@
+<style>
+.book__card{
+    width:700px;
+    border:2px solid #000;
+    border-radius:15px;
+    overflow:hidden;
+    font-family:Arial, sans-serif;
+    background:white;
+    margin:auto;
+    margin-top:40px;
+    margin-bottom:40px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.2);
+}
+.book__header{
+    background:linear-gradient(to right, #6a11cb, #2575fc);
+    text-align:center;
+    padding:14px;
+}
+.book__header h1{
+    margin:0;
+    font-size:30px;
+    color:#fff;
+}
+.book__body{
+    padding:25px;
+}
+.book__row{
+    margin-bottom:18px;
+}
+.book__row:last-child{
+    margin-bottom:0;
+}
+.book__label{
+    margin:0 0 4px 0;
+    font-size:16px;
+    color:#777;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+.book__value{
+    margin:0;
+    font-size:26px;
+    color:#111;
+    font-weight:bold;
+}
+.book__footer{
+    background:#2575fc;
+    color:white;
+    text-align:center;
+    padding:10px;
+    font-size:20px;
+    font-weight:bold;
+}
+</style>
+<div class="book__card">
+    <div class="book__header">
+        <h1>Book Details</h1>
+    </div>
+    <div class="book__body">
+        <div class="book__row">
+            <p class="book__label">Book Name</p>
+            <p class="book__value">${properties.bookName}</p>
+        </div>
+        <div class="book__row">
+            <p class="book__label">Author Name</p>
+            <p class="book__value">${properties.authorName}</p>
+        </div>
+    </div>
+    <div class="book__footer">
+        Book Library
+    </div>
+</div>

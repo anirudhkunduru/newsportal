@@ -1,0 +1,15 @@
+<sly data-sly-use.model="com.karthik.newsportal.core.models.CarouselModel">
+
+    <sly data-sly-list.item="${model.nestedmultiField}">
+
+        <p>${item.textField}</p>
+
+        <img src="${item.pathField}" alt="Image" width="200"/>
+
+        <sly data-sly-list.innerItem="${item.multiField}">
+            <p>${innerItem.textField2}</p>
+        </sly>
+
+    </sly>
+
+</sly>

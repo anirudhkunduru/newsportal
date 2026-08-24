@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Sidebar Properties"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items jcr:primaryType="nt:unstructured">
+                    <Header
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Header"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <Logo_x0020_Path
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Logo Path"
+                                name="./LogoPath"/>
+                            <Logo_x0020_Mobile_x0020_Image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Logo Mobile Image"
+                                name="./LogoMobileImage"/>
+                            <Logo_x0020_Link
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Logo Link"
+                                name="./LogoLink"/>
+                            <Enable_x0020_Switch
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldLabel="Enable Switch"
+                                name="./EnableSwitch"
+                                text="Enable Switch"
+                                uncheckedValue="false"
+                                value="true"/>
+                        </items>
+                    </Header>
+                    <Header_x0020_Links
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Header Links"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <multifield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Multifield">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./multifield">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <textfield
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="TextField"
+                                            name="./textfield"/>
+                                        <pathfield
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="PathField"
+                                            name="./pathfield"/>
+                                    </items>
+                                </field>
+                            </multifield>
+                        </items>
+                    </Header_x0020_Links>
+                    <SideBar_x0020_Navigation
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="SideBar Navigation"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <multifield
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldLabel="Multifield">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./multifield2">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <Desktop_x0020_Icon
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Desktop Icon"
+                                            name="./DesktopIcon"/>
+                                        <Mobile_x0020_Icon
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Mobile Icon"
+                                            name="./MobileIcon"/>
+                                        <Nested_x0020_Multifield
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                            composite="{Boolean}true"
+                                            fieldLabel="Nested Multifield">
+                                            <field
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                name="./NestedMultifield">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <Navigation_x0020_URL
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                        fieldLabel="Navigation URL"
+                                                        name="./NavigationURL"/>
+                                                </items>
+                                            </field>
+                                        </Nested_x0020_Multifield>
+                                    </items>
+                                </field>
+                            </multifield>
+                        </items>
+                    </SideBar_x0020_Navigation>
+                    <Region
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Region"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <Country
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldLabel="Country Options"
+                                name="./Country">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <option_x0020_-_x0020_1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Option - India"
+                                        value="India"/>
+                                    <option_x0020_-_x0020_2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Option - USA"
+                                        value="USA"/>
+                                </items>
+                            </Country>
+                        </items>
+                    </Region>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>
