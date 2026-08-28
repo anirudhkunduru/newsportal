@@ -1,39 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root
-    xmlns:jcr="http://www.jcp.org/jcr/1.0"
-    xmlns:nt="http://www.jcp.org/jcr/1.0"
-    xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
-    xmlns:cq="http://www.day.com/jcr/cq/1.0"
-    xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="nt:unstructured"
-    jcr:title="Single Article Properties"
+    jcr:title="Single Article"
     sling:resourceType="cq/gui/components/authoring/dialog">
-
     <content
         jcr:primaryType="nt:unstructured"
-        sling:resourceType="granite/ui/components/coral/foundation/container">
-
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
         <items jcr:primaryType="nt:unstructured">
-
-            <enablePII
-                granite:class="singlearticle-enable-pii"
+            <column
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
-                fieldLabel="Enable PII"
-                name="./enablePII"
-                text="Enable PII"
-                uncheckedValue="{Boolean}false"
-                value="{Boolean}true"/>
-
-            <cssClass
-                granite:class="singlearticle-css-class"
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                fieldLabel="Css Class"
-                name="./cssClass"/>
-
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <enablePII
+                        granite:class="cq-dialog-showhide"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        name="./enablePII"
+                        text="Enable PII"
+                        value="{Boolean}true">
+                        <granite:data
+                            jcr:primaryType="nt:unstructured"
+                            cq-dialog-showhide-target=".css-class-container"/>
+                    </enablePII>
+                    <includeclientlibs
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/includeclientlibs"
+                        categories="[enablepII]"/>
+                    <deleteCssClass
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                        name="./cssClass@Delete"
+                        value="true"
+                        disabled="{Boolean}true"/>
+                    <css-class-container
+                        granite:class="css-class-container"
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <cssClass
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="CSS Class"
+                                name="./cssClass"/>
+                        </items>
+                    </css-class-container>
+                </items>
+            </column>
         </items>
-
     </content>
-
 </jcr:root>
