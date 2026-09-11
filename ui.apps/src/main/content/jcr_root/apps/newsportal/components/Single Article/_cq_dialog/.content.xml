@@ -29,9 +29,9 @@
                     <deleteCssClass
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/hidden"
+                        disabled="{Boolean}true"
                         name="./cssClass@Delete"
-                        value="true"
-                        disabled="{Boolean}true"/>
+                        value="true"/>
                     <css-class-container
                         granite:class="css-class-container"
                         jcr:primaryType="nt:unstructured"

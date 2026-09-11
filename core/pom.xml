@@ -50,7 +50,7 @@
                         </goals>
                         <configuration>
                             <bnd><![CDATA[
-Import-Package: com.day.cq.,javax.inject,org.apache.sling.,org.osgi.,
+Import-Package: com.day.cq.,com.adobe.granite.ui.components.ds.,javax.inject,org.apache.sling.,org.osgi.,
                             ]]></bnd>
                         </configuration>
                     </execution>
