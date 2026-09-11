@@ -1,0 +1,8 @@
+<div class="profiles">
+    <h2>${properties.name}</h2>
+
+    <img data-sly-test="${properties.image}"
+         src="${properties.image @ context='uri'}"
+         alt="${properties.name}"
+         style="width: 50%; height: 50%; object-fit: cover; display: block;" />
+</div>
